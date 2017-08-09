@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		
+		.list{
+			float: left;
+			width: 200px;
+			height: 200px;
+			margin-right: 20px;
+			border: 1px solid black;
+		}
+		.list1{
+			text-shadow: 1px 1px 2px black;
+		}
+		.list2{
+			text-shadow: #CCC 1px 0 10px;
+		}
+		.list3{
+			text-shadow: 5px 5px #558ABB;
+		}
+		.list4{
+			text-shadow: white 2px 5px;
+		}
+		.list5{
+			text-shadow: 5px 10px;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- /* offset-x | offset-y | blur-radius | color */
+	text-shadow: 1px 1px 2px black; --> 
+	<div class="list list1">text-shadow</div>
+
+	<!-- /* color | offset-x | offset-y | blur-radius */
+	text-shadow: #CCC 1px 0 10px;  -->
+	<div class="list list2">text-shadow</div>
+
+	<!-- /* offset-x | offset-y | color */
+	text-shadow: 5px 5px #558ABB; -->
+	<div class="list list3">text-shadow</div>
+
+	<!-- /* color | offset-x | offset-y */
+	text-shadow: white 2px 5px; -->
+	<div class="list list4">text-shadow</div>
+
+	<!-- /* offset-x | offset-y
+	/* Use defaults for color and blur-radius */
+	text-shadow: 5px 10px;  -->
+	<div class="list list5">text-shadow</div>
+
+</body>
+</html>

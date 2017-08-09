@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body{
+			background: #000;
+			text-align: center;
+			font: 50px/200px;
+		}
+		h1{
+			display: inline-block;
+			color: rgba(255,255,255,0.3);
+			font-size: 100px;
+			background: -webkit-linear-gradient(-30deg,rgba(255,255,255,0) 100px, rgba(255,255,255,1) 180px,rgba(255,255,255,1) 240px,rgba(255,255,255,0) 300px) -300px 0;
+			-webkit-background-clip: text;
+		}
+		
+
+	</style>
+</head>
+<body>
+	<h1>这是一个标题</h1>
+	<script type="text/javascript">
+		
+		var h1 = document.getElementsByTagName('h1')[0];
+		var timer = null;
+		var oLeft = -300;
+
+		function move(){
+			timer=setInterval(function(){
+				oLeft += 10;
+				if (oLeft == 1000) {
+					oLeft = -300;
+					clearInterval(timer)
+				}
+				h1.style.backgroundPosition = oLeft +'px 0px';
+			},20)
+		}
+		move();
+		setInterval(function(){
+			move()
+		},4000)
+	</script>
+</body>
+</html>
