@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+</head>
+<body>
+	<button>click me</button>
+	<input id="inputField" type="text" size="12" value="111" />
+
+	<script type="text/javascript">
+		
+		// $("button").click(function(){
+		// 	alert('被点击')
+		// })
+
+		$("html").append('<button>2</button>')
+		$("button").on('click',function(){
+			alert('被点击')
+			$("#inputField").hide()
+		})
+		$("*").css("border","2px solid black")
+		$("#inputField").click(function(){
+			alert($("#inputField").val())
+		})
+	</script>
+</body>
+</html>
