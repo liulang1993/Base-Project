@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+	<li>Item</li>
+	<li></li>
+	<li></li> 
+	<li>Item</li> 
+	<li>Item</li>
+	</ul>
+<script type="text/javascript">
+
+		var items = document.getElementsByTagName('li');
+		for(var i = 0; i< items.length; i++){
+			if(items[i].innerHTML == ''){ 
+				items[i].parentNode.removeChild(items[i]);
+			}
+		}
+		console.log(items.length)
+	
+</script>
+</body>
+</html>
