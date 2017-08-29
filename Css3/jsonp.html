@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function fn(data){
+			alert(data)
+		}
+	</script>
+	<style type="text/css">
+		
+		.container{
+			display: flex; 
+			align-items: center;			
+			background: red;
+			justify-content: center
+		}
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			font-size: 50px;
+			font-family:  antialiased;
+		}
+		.box2{
+			width: 0;
+			height: 0;
+			border-width: 40px;
+			border: solid;
+			border-color: transparent transparent red transparent;
+		}
+		.box1{
+			width: 0;
+			height: 0;
+			border: solid;
+			border-width: 20px;
+			border-color: red transparent transparent transparent;
+		}
+		
+
+	</style>
+</head>
+<body>
+
+<div class="container">
+	<div class="box"></div>
+</div>
+<div class="bb">
+<div class="box box1"></div>
+<div class="box box2">2</div>
+	
+</div>
+<div style="height:1px;overflow:hidden;background:red"></div>
+	<input type="button" value="提交" id="btn">
+	<script type="text/javascript">
+		window.onload = function(){
+			var btn = document.getElementById('btn')
+			btn.onclick = function(){
+				var oScript = document.createElement('script')
+				oScript.src = "1.txt"
+				document.body.appendChild(oScript)
+			}
+		}
+	</script>
+</body>
+</html>

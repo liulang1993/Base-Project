@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		// function random (a,b){
+		// 	return Math.random() > 0.5 ? -1 : 1
+		// }
+		// var arr2 = [1,2,3,4,5,6,7,8,9]
+		// console.log(arr2.sort(random))
+		
+		// function randomSort(arr,newarr){
+		// 	var newArr = []
+		// 	if (arr.length == 1) {
+		// 		newArr.push(arr[0])
+		// 		return newArr
+		// 	}
+		// 	var random = Math.ceil(Math.random()*arr.length - 1)
+		// 	newArr.push(arr[random])
+		// 	arr.splice(random,1)
+		// 	return randomSort(arr,newArr)
+		// }
+		// var arr2 = [1,2,3,4,5,6,7,8,9]
+		// console.log(arr2.sort(randomSort))
+		
+		// function randomSort(arr,newArr){
+		// 	var newArr = []
+		// 	if (arr.length == 1) {
+		// 		newArr.push(arr[0])
+		// 		return newArr
+		// 	}
+		// 	var random = Math.ceil(Math.random() * arr.length - 1)
+		// 	newArr.push(arr[random])
+		// 	arr.splice(random,1)
+		// 	return randomSort(arr,newArr)
+		// }
+		// var arr2 = [1,2,3,4,5,6,7,8,9]
+		// console.log(arr2.sort(randomSort))
+		
+
+		var arr = [1,2,3,4,5,6,7,8,9]
+		function randomSort(arr,newArr){
+			for (var i = 0; i < arr.length; i++) {
+				var random = parseInt(Math.random()*arr.length)
+				var temp = arr[random]
+				arr[random] = arr[i]
+				arr[i] = temp
+			}
+			return arr
+		}
+		console.log(randomSort(arr))
+	</script>
+</body>
+</html>

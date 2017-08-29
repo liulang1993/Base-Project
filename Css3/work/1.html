@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body{
+			background: red;
+			height: 2000px;
+		}
+		#box{
+			width: 100px;
+			height: 100px;
+			background: yellow;
+			position: absolute;
+			top: 500px;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+	<a href="" id="btn">按钮</a>
+	<div id="box"></div>
+	<script type="text/javascript">
+		var btn = document.getElementById('btn')
+		var box = document.getElementById('box')
+		//平台、设备和操作系统
+       var system = {
+           win: false,
+           mac: false,
+           xll: false,
+           ipad:false
+       };
+       //检测平台
+       var p = navigator.platform;
+       system.win = p.indexOf("Win") == 0;
+       system.mac = p.indexOf("Mac") == 0;
+       system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+       system.ipad = (navigator.userAgent.match(/iPad/i) != null)?true:false;
+       //跳转语句，如果是手机访问就自动跳转到wap.baidu.com页面
+       if (system.win) {
+       		btn.href="http://www.baidu.com"
+       } else {
+           btn.href = "http:www.qq.com";
+       }
+
+
+       var scrollTop = document.body.scrollTop;
+       if (scrollTop > 400) {
+       		box.style.background = 'blue';
+       }
+       console.log(scrollTop)
+
+   	</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var arr = [1,2,3,4,5,6,7,8,9]
+
+		function randomSort(arr,newArr){
+			for (var i = 0; i < arr.length; i++) {
+				var random = parseInt(Math.random()*arr.length)
+				var temp = arr[random]
+				arr[random] = arr[i]
+				arr[i] = temp
+			}
+			return arr
+		}
+
+		console.log(randomSort(arr))
+
+
+
+		
+
+		// function randomSort(arr,newArr){
+		// 	for (var i = 0; i < arr.length; i++) {
+		// 		var random = parseInt(Math.random() * arr.length)
+		// 		var temp = arr[random]
+		// 		arr[random]= arr[i]
+		// 		arr[i] = temp
+		// 	}
+		// 	return arr
+		// }
+		// console.log(randomSort(arr))
+		// function random (a,b){
+		// 	return Math.random() > 0.5 ? -1 : 1
+		// }
+		// console.log(arr.sort(random))
+		// 
+		// 
+		// for(var i=1;i<=3;i++){
+		//  	setTimeout((function(i){
+		//  		console.log(i)
+		//  	})(i),2000)
+		 	
+		// };
+		// 
+// 		var a=10, b=20 , c=30; 
+// 		++a;  11
+// 		console.log(a)
+// 		a++;  12
+// 		console.log(a)
+// 		e=++a + (++b) + (c++);
+// 		++a;
+// 		console.log(a); 
+// 		console.log(e);
+// 		// var bool = !!1; alert(bool)
+// 		var reg = /^[a-zA-Z_][a-zA-Z0-9_]{5,20}/;
+// 		name1 = 'leipeng',
+// name2 = '0leipeng', name3 = '你好 leipeng', name4 = 'hi';
+// alert(reg.test(name1)); alert(reg.test(name2)); alert(reg.test(name3)); alert(reg.test(name4));
+
+	</script>
+</body>
+</html>

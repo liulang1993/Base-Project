@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实例1</title>
+	<style type="text/css">
+
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#main1{
+			width: 100%;
+			height:740px;
+			margin: 0 auto;
+			position: relative;
+			color: #fff;
+			background-image: url(hero_sunset_large_2x.jpg);
+			background-position: 50% ; 
+			background-repeat:no-repeat; 
+			background-size: 100% ;
+		}
+		#it{
+			height: 100px;
+			text-align: center;
+			font-size: 20px;
+			line-height: 100px;
+			position: absolute;
+			display: block;
+			width: 100%;
+			top: 20px;
+			opacity: 0.6;
+			font-weight: normal;
+		}
+		#it-main{
+			height: 60px;
+			text-align: center;
+			position: absolute;
+			bottom: 10px;
+			padding: 20px 300px;
+			line-height: 30px;
+			opacity: 0.6;	
+		}
+		#it-link{
+			display: block;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			position: absolute;
+			bottom: -10px;
+			width: 100%;
+			color: orange;
+		}
+
+		#main2{
+			width: 100%;
+			height:740px;
+			margin: 0 auto;
+			position: relative;
+			color: black;
+			background:#f2f2f2 url(technology_hero_large_2x.jpg)no-repeat bottom;
+			background-size: 100%;
+		}
+		#you{
+			font-weight: normal;
+			height: 100px;
+			text-align: center;
+			font-size: 80px;
+			position: absolute;
+			top:50px;
+			width: 100%;
+			line-height: 100px;
+			opacity: 1;
+		}
+		#you-link{
+			display: block;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			position: absolute;
+			bottom: 10px;
+			width: 100%;
+		}
+		#main3{
+			width: 100%;
+			height:740px;
+			margin: 0 auto;
+			position: relative;
+			color: black;
+			background:#fff url(timekeeping_hero_large_2x.jpg)no-repeat center 300px;
+			background-size: 50%
+		}
+		#fei{
+			height: 80px;
+			width: 640px;
+			font-size: 50px;
+			line-height: 80px;
+			text-align: center;
+			display: block;
+			position: absolute;
+			left: -640px;
+			margin-top: 20px;
+			font-weight: normal;
+			opacity: 0;
+		}
+		#feimain{
+			width: 640px;
+			height: 100px;
+			position: absolute;
+			right:-600px;
+			line-height: 30px;	
+			text-align: center;
+			bottom: 510px;
+			opacity: 0;
+		}
+		#feilink{
+			display: block;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			position: absolute;
+			bottom: 0px;
+			opacity: 0;
+			width: 100%;
+		}
+	</style>
+	<script type="text/javascript" src="完美运动框架.js"></script>
+</head>
+<body>
+	<div id="main1">
+		<h1 id="it">它，终于来了</h1>
+		<p id="it-main">为了充分发挥体积小巧以及佩戴于手腕的优势，Apple Watch带来了全新的科技和互动方式， 他可以让你更快速便捷的完成一些早已习惯的事，也可以实现过去根本无法企及的新功能，因此，这将是焕然一新的使用体验，也将时间与你前所未有的贴近。</p>
+		<a href="#" id="it-link">进一步了解</a>
+	</div>
+	<div id="main2">
+		<h1 id="you">真正与你贴近的个人设备</h1>
+		<a href="#" id="you-link">进一步了解</a>
+	</div>
+	<div id="main3">
+		<h1 id="fei">非同一般的精准计时</h1>
+		<p id="feimain">高级手表向来以计时精准为本，Apple Watch 更是如此。它与你的iphone 配合使用，通全球标准时间的误差不超过50毫秒。而且，你可以对表盘进行个性化设定，以更具个性和意义的方式显示时间，使其更贴合你的生活和日程需要。</p>
+		<a href="#" id="feilink">进一步了解计时</a>
+	</div>
+	<script type="text/javascript">
+
+
+
+		window.onload = function(){
+			var it = document.getElementById('it');
+			var itmain = document.getElementById('it-main');
+			var itlink = document.getElementById('it-link');
+			var you = document.getElementById('you');
+			var youlink = document.getElementById('you-link');
+			var fei = document.getElementById('fei');
+			var feimain = document.getElementById('feimain');
+			var feilink = document.getElementById('feilink');
+			startMove(it,{top:180,fontSize:100});
+			startMove(itmain,{bottom:300});
+			startMove(itlink,{bottom:220});
+			
+			window.onscroll=function(){
+				var disTop = document.documentElement.scrollTop||document.body.scrollTop;
+				if(disTop >= 500 && disTop < 1000){
+					startMove(you,{fontSize:55,opacity:80})
+					startMove(youlink,{bottom:520});
+				}
+				else if(disTop >= 1000){
+					startMove(fei,{left:400,opacity:100});
+					startMove(feimain,{right:400,opacity:100});
+					startMove(feilink,{bottom:470,opacity:100});
+				}
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

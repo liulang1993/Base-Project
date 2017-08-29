@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.news {
+		  background-color: gray;
+		  border: solid 1px black;
+		  }
+
+		.box {
+			width: 60px;
+			height: 60px;
+			background: red;
+		  	float: left;
+		  }
+
+		.news p {
+		  float: right;
+		  background: yellow;
+		  }
+
+		.news:after{
+		  content: "020"; 
+		  display: block; 
+		  height: 0; 
+		  clear: both; 
+		  visibility: hidden;  
+		  }
+
+		.news {
+		  /* 触发 hasLayout */ 
+		  zoom: 1; 
+		  }
+	</style>
+</head>
+<body>
+	<div class="news clearfix">
+		<div class="box">1</div>
+		<p>some text</p>
+	</div>
+	<script type="text/javascript">
+		
+	var jj = {'age':'12', 'name':'back'}
+		console.log(typeof jj +'jj')
+
+	</script>
+</body>
+</html>
